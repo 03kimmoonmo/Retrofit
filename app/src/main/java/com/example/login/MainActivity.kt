@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     response: Response<LoginResponse>
                 ) {
                     if (response.isSuccessful)
-                        txt_response.text =
+                        txt_response.text = 
                             response.body()?.nonFieldErrors?.get(0) ?: "Empty Response"
                     else
                         txt_response.text = response.errorBody()?.string()
